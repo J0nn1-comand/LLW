@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+    <ListView HorizontalAlignment="Left" Name="UILIST" Height="389" Margin="23,20,0,0"  VerticalAlignment="Top" Width="376" SelectionChanged="UILIST_SelectionChanged" SelectedIndex="1">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Header="ISBN" DisplayMemberBinding="{Binding ISBN}"/>
+                <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
+                <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding AFirstN}"/>
+                <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding ALastN}"/>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    <TextBlock HorizontalAlignment="Left" Margin="421,43,0,0" TextWrapping="Wrap" Text="Title:" VerticalAlignment="Top" Height="25" Width="71"/>
+    <TextBlock HorizontalAlignment="Left" Margin="421,102,0,0" TextWrapping="Wrap" Text="Author first Name:" VerticalAlignment="Top" Height="25" Width="103"/>
+    <TextBlock HorizontalAlignment="Left" Margin="421,162,0,0" TextWrapping="Wrap" Text="Author Last Name:" VerticalAlignment="Top" Height="25" Width="103"/>
+    <TextBlock HorizontalAlignment="Left" Margin="421,222,0,0" TextWrapping="Wrap" Text="ISBN:" VerticalAlignment="Top" Height="25" Width="71"/>
+    <TextBox HorizontalAlignment="Left" Height="26" Margin="566,43,0,0" TextWrapping="Wrap" Name="tbtitle" Text="" VerticalAlignment="Top" Width="117"/>
+    <TextBox HorizontalAlignment="Left" Height="26" Margin="566,101,0,0" TextWrapping="Wrap" Name="tbfirstname" Text="" VerticalAlignment="Top" Width="117"/>
+    <TextBox HorizontalAlignment="Left" Height="26" Margin="566,161,0,0" TextWrapping="Wrap" Name="tbLastname" Text="" VerticalAlignment="Top" Width="117"/>
+    <TextBox HorizontalAlignment="Left" Height="26" Margin="566,221,0,0" TextWrapping="Wrap" Name="tbISBN" Text="" VerticalAlignment="Top" Width="117"/>
+    <Button Content="Update" Click="Update" HorizontalAlignment="Left" Height="23" Margin="421,298,0,0" VerticalAlignment="Top" Width="95"/>
+    <Button Content="Delete" Click="Delete" HorizontalAlignment="Left" Height="23" Margin="521,298,0,0" VerticalAlignment="Top" Width="95"/>
+    <Button Content="Add" Click="Add" HorizontalAlignment="Left" Height="23" Margin="621,298,0,0" VerticalAlignment="Top" Width="95"/>
+    <Button Content="Clear" Click="Clear" HorizontalAlignment="Left" Height="22" Margin="717,225,0,0" VerticalAlignment="Top" Width="48"/>
+    </Grid>
+</Window>
